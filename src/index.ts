@@ -43,6 +43,7 @@ async function updateDnsRecord(dnsRecord: DnsRecord, publicIp: string) {
             body: JSON.stringify({
                 ...dnsRecord,
                 content: publicIp,
+                comment: `Last updated on ${new Date()}`,
             }),
         },
     )
